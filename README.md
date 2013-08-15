@@ -9,3 +9,6 @@ http://www.gnucitizen.org/blog/javascript-port-scanner/
 written by Petko Petkov.
 
 It needs jquery.
+
+See the portscanner in action at
+http://htmlpreview.github.io/?https://raw.github.com/aabeling/portscan/master/index.html
