@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="jsportscanner.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    <!--
+
+      function check() {
+        var host = document.getElementById('host').value;
+        var port = document.getElementById('port').value;
+        AttackAPI.PortScanner.scanTarget(function(target,port,result) {
+          alert(target + ":" + port + " " + result);
+          }, host, [port], 1000);
+      }
+    -->
+    </script>
+  </head>
+  <body>
+    <form>
+      Host: <input type="text" id="host" name="host" length="20" />
+      Port: <input type="text" id="port" name="port" length="6" />
+      <input type="submit" value="Check" onclick="check();return false" />
+  </body>
+
+</html>
