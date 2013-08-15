@@ -7,3 +7,5 @@ found in portscanner.js (use the source, Luke).
 The portscanning function is taken from
 http://www.gnucitizen.org/blog/javascript-port-scanner/
 written by Petko Petkov.
+
+It needs jquery.
