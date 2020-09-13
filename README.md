@@ -10,5 +10,5 @@ written by Petko Petkov.
 
 It needs jquery.
 
-See the portscanner in action at
+The preview of the index.html is not working anymore, don't know why and I will not investigate:
 http://htmlpreview.github.io/?https://raw.github.com/aabeling/portscan/master/index.html
