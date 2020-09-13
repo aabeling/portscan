@@ -21,6 +21,7 @@ PortScanner.prototype.init = function() {
 			
 			/* put the status into the element */
 			element.text(status);
+			console.log(target + ":" + port + ": " + status);
 		}, host, port, 1000);
 	});
 };
