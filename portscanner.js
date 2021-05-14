@@ -31,21 +31,33 @@ PortScanner.prototype.init = function() {
  */
 PortScanner.prototype.check = function (callback, target, port, timeout) {
 	
+	console.log("starting port check for " + target + ":" + port);
+
 	var timeout = (timeout == null)?100:timeout;
 	var img = new Image();
 	
 	img.onerror = function () {
+		console.log("onerror " + target + ":" + port + ": img=" + img);
 		if (!img) return;
 		img = undefined;
 		callback(target, port, 'open');
 	};
 	
-	img.onload = img.onerror;
+	img.onload = function() {
+		console.log("onload " + target + ":" + port + ": img=" + img);
+		this.onerror();
+	};
 	img.src = 'http://' + target + ':' + port;
 	
 	setTimeout(function () {
-		if (!img) return;
-		img = undefined;
+		console.log("timeout for " + target + ":" + port + ": img=" + img);
+		if (!img) {
+			console.log("  but loading already succeeded");
+			return;
+		}
+		/* set the image to something we know is not blocked to end the request */
+		img.onerror = function() {};
+		img.src = "http://github.com:80";
 		callback(target, port, 'closed');
 	}, timeout);
 };
