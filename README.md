@@ -1,3 +1,7 @@
+**This repo has been archived. I will not work on it anymore.**
+
+---
+
 Port scanning with Javascript
 
 The index.html shows how it can be used.
